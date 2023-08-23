@@ -1,0 +1,24 @@
+.hover-button:hover {
+    -fx-background-color: #4CAF50; /* Màu nền khi hover */
+    -fx-text-fill: black; /* Màu chữ khi hover */
+    -fx-font-weight: bold; /* In đậm chữ khi hover (tuỳ chọn) */
+    -fx-border-color: transparent; /* Loại bỏ viền khi hover (tuỳ chọn) */
+    -fx-cursor: hand; /* Thay đổi kiểu con trỏ chuột khi hover (tuỳ chọn) */
+}
+
+.hover-button2:hover {
+    -fx-background-color: #4CAF50; /* Màu nền khi hover */
+    -fx-text-fill: white; /* Màu chữ khi hover */
+    -fx-font-weight: bold; /* In đậm chữ khi hover (tuỳ chọn) */
+    -fx-border-color: transparent; /* Loại bỏ viền khi hover (tuỳ chọn) */
+    -fx-cursor: hand; /* Thay đổi kiểu con trỏ chuột khi hover (tuỳ chọn) */
+}
+
+.text-field {
+    -fx-border-width: 1px;
+}
+/*classButtonOnAction*/
+/*studentButtonOnAction*/
+/*scoreButtonOnAction*/
+/*subjectButtonOnAction*/
+/*statisticsButtonOnAction*/

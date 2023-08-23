@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="580.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ltnc.qlthcs.controllers.StatisticsController">
+   <children>
+      <AnchorPane prefHeight="180.0" prefWidth="1050.0">
+         <children>
+            <AnchorPane prefHeight="180.0" prefWidth="1059.0" style="-fx-background-color: #b22222;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button fx:id="homepageButton" layoutX="36.0" layoutY="16.0" mnemonicParsing="false" onAction="#homepageButtonOnAction" prefHeight="100.0" prefWidth="106.0" style="-fx-background-color: #b22222;" styleClass="hover-button" stylesheets="@design.css" />
+                  <Button fx:id="closeButton" layoutX="1025.0" layoutY="1.0" mnemonicParsing="false" onAction="#closeButtonOnAction" prefHeight="27.0" prefWidth="34.0" style="-fx-background-color: #b22222;" styleClass="hover-button" stylesheets="@design.css" text="X" textFill="WHITE">
+                     <font>
+                        <Font name="Verdana Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <FlowPane layoutX="5.0" layoutY="130.0" prefHeight="50.0" prefWidth="1050.0">
+                     <children>
+                        <Button fx:id="classButton" mnemonicParsing="false" onAction="#classButtonOnAction" prefHeight="50.0" prefWidth="175.0" style="-fx-background-color: #ffffff;" styleClass="hover-button" stylesheets="@design.css" text="Lớp" />
+                        <Button fx:id="studentButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#studentButtonOnAction" prefHeight="50.0" prefWidth="175.0" style="-fx-background-color: #ffffff;" styleClass="hover-button" stylesheets="@design.css" text="Học sinh" />
+                        <Button fx:id="teacherButton" layoutX="64.0" layoutY="10.0" mnemonicParsing="false" onAction="#teacherButtonOnAction" prefHeight="50.0" prefWidth="175.0" style="-fx-background-color: #ffffff;" styleClass="hover-button" stylesheets="@design.css" text="Giáo viên" />
+                        <Button fx:id="scoreButton" layoutX="117.0" layoutY="10.0" mnemonicParsing="false" onAction="#scoreButtonOnAction" prefHeight="50.0" prefWidth="175.0" style="-fx-background-color: #ffffff;" styleClass="hover-button" stylesheets="@design.css" text="Điểm" />
+                        <Button fx:id="subjectButton" layoutX="171.0" layoutY="10.0" mnemonicParsing="false" onAction="#subjectButtonOnAction" prefHeight="50.0" prefWidth="175.0" style="-fx-background-color: #ffffff;" styleClass="hover-button" stylesheets="@design.css" text="Môn học" />
+                        <Button fx:id="statisticsButton" layoutX="224.0" layoutY="10.0" mnemonicParsing="false" onAction="#statisticsButtonOnAction" prefHeight="50.0" prefWidth="175.0" style="-fx-background-color: #ffffff;" styleClass="hover-button" stylesheets="@design.css" text="Thống kê" />
+                     </children>
+                  </FlowPane>
+                  <MenuButton fx:id="logOutMenuButton" layoutX="804.0" layoutY="50.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #b22222;">
+                     <items>
+                        <MenuItem fx:id="logOutMenuItem" mnemonicParsing="false" onAction="#logOutMenuItemOnAction" text="Đăng xuất" />
+                     </items>
+                     <font>
+                        <Font name="Courier New Bold" size="15.0" />
+                     </font>
+                  </MenuButton>
+                  <Line endX="952.0" layoutX="106.0" layoutY="130.0" startX="-100.0" strokeWidth="2.0">
+                     <effect>
+                        <Shadow />
+                     </effect>
+                  </Line>
+                  <Label layoutX="181.0" layoutY="24.0" text="Hệ thống quản lý" textFill="WHITE">
+                     <font>
+                        <Font name="Verdana Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="181.0" layoutY="81.0" text="THCS Bách Khoa" textFill="WHITE">
+                     <font>
+                        <Font name="Verdana" size="28.0" />
+                     </font>
+                  </Label>
+                  <Line endX="174.5" layoutX="282.0" layoutY="70.0" startX="-100.0" stroke="WHITE" strokeWidth="2.0" />
+                  <Circle fill="#a9adb2" layoutX="771.0" layoutY="66.0" radius="26.0" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+       <AnchorPane layoutY="182.0" prefHeight="455.0" prefWidth="1059.0">
+         <children>
+            <Button layoutX="860.0" layoutY="20.0" mnemonicParsing="false" text="Tìm kiếm " />
+            <Button layoutX="942.0" layoutY="20.0" mnemonicParsing="false" text="Xuất Excel" />
+            <Accordion layoutX="81.0" layoutY="125.0" />
+            <TreeTableView fixedCellSize="0.0" layoutX="22.0" layoutY="120.0" prefHeight="100.0" prefWidth="996.0">
+              <columns>
+                <TreeTableColumn prefWidth="32.800018310546875" text="STT" />
+                <TreeTableColumn prefWidth="68.00000381469727" text="Lớp" />
+                  <TreeTableColumn prefWidth="59.199981689453125" text="Sĩ số" />
+                  <TreeTableColumn prefWidth="95.99998474121094" text="Xếp loại Giỏi" />
+                  <TreeTableColumn prefWidth="97.60003662109375" text="Xếp loại Khá" />
+                  <TreeTableColumn prefWidth="93.5999755859375" text="Xếp loại TB" />
+                  <TreeTableColumn prefWidth="99.199951171875" text="Xếp loại Yếu" />
+                  <TreeTableColumn prefWidth="115.2000732421875" text="Xếp loại Kém" />
+                  <TreeTableColumn prefWidth="102.0" text="Ghi chú" />
+              </columns>
+               <columnResizePolicy>
+                  <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TreeTableView>
+            <Hyperlink layoutX="99.0" layoutY="63.0" text="Khối :" textFill="FIREBRICK">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Hyperlink>
+            <ComboBox layoutX="148.0" layoutY="63.0" prefWidth="150.0" promptText="-- Tất cả --" />
+            <Hyperlink layoutX="416.0" layoutY="63.0" text="Học kì :" textFill="FIREBRICK">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Hyperlink>
+            <ComboBox layoutX="476.0" layoutY="63.0" prefWidth="150.0" promptText="Học kì 1" />
+            <TableView layoutX="22.0" layoutY="303.0" prefHeight="111.0" prefWidth="996.0">
+               <columns>
+                  <TableColumn prefWidth="29.599973678588867" text="STT" />
+                  <TableColumn prefWidth="68.80002212524414" text="Tổng số" />
+                  <TableColumn prefWidth="63.99998474121094" text="Toán " />
+                  <TableColumn prefWidth="66.39996337890625" text="Văn" />
+                  <TableColumn prefWidth="57.5999755859375" text="Anh" />
+                  <TableColumn prefWidth="63.99993896484375" text="Vật lý" />
+                  <TableColumn prefWidth="56.79998779296875" text="Tin " />
+                  <TableColumn prefWidth="56.79998779296875" text="Địa " />
+                  <TableColumn prefWidth="68.0" text="Lịch sử" />
+                  <TableColumn prefWidth="79.19989013671875" text="Công nghệ" />
+                  <TableColumn prefWidth="75.199951171875" text="Sinh học" />
+                  <TableColumn editable="false" prefWidth="61.60003662109375" sortable="false" text="Hóa học" />
+                  <TableColumn prefWidth="52.79998779296875" text="GDCD" />
+                  <TableColumn prefWidth="61.60009765625" text="Thể dục" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Label layoutX="411.0" layoutY="21.0" text="THỐNG KÊ HỌC SINH" textFill="FIREBRICK">
+               <font>
+                  <Font name="Verdana Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="401.0" layoutY="254.0" text="THỐNG KÊ GIÁO VIÊN" textFill="FIREBRICK">
+               <font>
+                  <Font name="Verdana Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
